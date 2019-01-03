@@ -1,17 +1,6 @@
-foto {
+class foto {
   constructor() {
 
   }
-
-  // saveToStorage() {
-
-  // }
-
-  // deleteFromStorage() {
-
-  // }
-
-  // updateFoto() {
-    
-  // }
+  
 }
