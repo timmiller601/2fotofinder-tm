@@ -50,6 +50,7 @@ header {
   color: #8A8494;
   width: 100%;
   padding-left: 5px;
+  font-size: 20px;
 }
 
 .search-button {
@@ -83,6 +84,7 @@ header {
   width: 55%;
   margin: 0 auto;
   margin-top: 16px;
+  max-width: 540px;
 }
 
 .inputfile {
@@ -112,6 +114,7 @@ header {
   border: solid 1px #d4d2d8;
   border-radius: 2px;
   height: 38px;
+  margin-top: 5px;
 }
 
 .buttons {
@@ -119,10 +122,14 @@ header {
   flex-direction: column;
   width: 74.5%;
   margin: 0 auto;
-  font-weight: 800;
+  font-size: 20px;
   margin-top: 40px;
   align-items: center;
-  padding-top: 13px;
+  padding-top: 10px;
+}
+
+.button-width {
+  max-width: 736px;
 }
 
 .row-buttons {
@@ -245,15 +252,16 @@ h4 {
     align-items: center;
   }
   .search-form {
-    width: 80%;
+    width: 70%;
   }
   .inputs {
-    width: 80%;
+    width: 70%;
   }
   .buttons {
-    width: 80%;
+    width: 70%;
     font-size: 13px;
   }
+
   .inputfile + label {
     width: 100%;
   }
