@@ -3,7 +3,7 @@ var captionInput = document.getElementById('caption-input');
 
 document.getElementById('add-button').addEventListener('click', addCard);
 
-function addCard(photo) {
+function addCard(foto) {
   var card = document.createElement('section');
   var cardSection = document.querySelector('.card-section');
   card.className = 'photo-card';
