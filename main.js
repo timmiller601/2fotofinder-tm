@@ -3,6 +3,8 @@ var captionInput = document.getElementById('caption-input');
 
 document.getElementById('add-button').addEventListener('click', addCard);
 
+reloadPhotos();
+
 function addCard(foto) {
   var card = document.createElement('section');
   var cardSection = document.querySelector('.card-section');
@@ -23,4 +25,18 @@ function addCard(foto) {
     update(photo.favorite);
     document.querySelector('.favorite-icon').classList.add('favorite-active');
   }
+};
+
+function reloadPhotos() {
+  Object.keys(localStorage).forEach(function(key) {
+    addCard(JSON.parse(localStorage.getItem(key)));
+  })
+};
+
+function setProperties() {
+  var upload = document.querySelector('.inputfile').files[0];
+  var url = URL.createObjectURL(upload);
+  var newPhoto = new Photo('', titleInput.value, captionInput.value, url, '');
+  newPhoto.saveToStorage(); 
+  addCard(newPhoto); 
 };
