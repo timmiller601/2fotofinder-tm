@@ -151,6 +151,10 @@ p {
   width: 45%;
 }
 
+.add-filter-btns: hover {
+  cursor: pointer;
+}
+
 /*card section*/
 .foto-card {
     margin-top: 20px;
