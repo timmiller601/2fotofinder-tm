@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FotoFinder</title>
+  <title>fotoFinder</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
   <header>
-    <h1 class="page-title-foto">FOTO<img class="site-logo" src="images/foto-finder-logo.svg"><span class="page-title-finder">FINDER</span></h1>
-    <form class="search-form">
-      <input type="text" placeholder=" Search" id="search-input">
-      <button type="submit" class="search-button">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-  </header>
-  <section class="entry-section">
-    <label for="title-input" class="inputs labels">Title</label>
-    <input type="text" id="title-input" class="inputs">
-    <label for="caption-input" class="inputs labels">Caption</label>
-    <input type="text" id="caption-input" class="inputs"></input>
-    <div class="buttons button-width">
-      <input type="file" name="file" id="file" class="inputfile" accept="image/*"></input>
-      <label for="file">Choose File</label>
-      <div class="row-buttons">
-        <button id="favorite-button" class="buttons">View # Favorites</button>
-        <button id="add-button" class="buttons">Add to Album</button>
-       </div>
+    <div class="logo-div">
+      <h1>FOTO<img class="logo-svg" alt="foto finder logo" src="Images/foto-finder-logo.svg">FINDER</h1>
     </div>
+    <div class="search-div">
+      <input class ="search-input" type="text" name="search" placeholder="Search">
+      <div class="search-icon-div"><i class="fas fa-search"></i></div>
+    </div>
+  </header>
+  <section class="user-inputs">
+    <form class="user-inputs-form">
+      <label class="input-label" for="title">Title</label>
+      <input class="title" type="text" name="title" maxlength="60" placeholder="Enter your title - max 60 characters">
+      <label class="input-label" for="caption">Caption</label>
+      <textarea class="caption" type="text" name="caption" maxlength="240" placeholder="Enter your caption - max 240 characters"></textarea>
+      <input id="foto-upload-input" type="file" name="fotoUpload" accept="image/*">
+      <label id="foto-upload-label" for="foto-upload-input">Choose a File</label>
+      <div class="add-filter-btns-div">
+        <button class="add-filter-btns fav-btn">View <span class="favorite-number">#</span> Favorites</button>
+        <button disabled class="add-filter-btns add-btn">Add to Album</button>
+      </div>
+    </form>
   </section>
-  <section class="card-section filter-favorites">
+  <!-- foto Cards go here -->
+  <section class="foto-card-section">
   </section>
-<script type="text/javascript" src="foto.js"></script>
-<script type="text/javascript" src="main.js"></script>
+  <section class="show-more-section">
+    <button disabled class="show-more-btn">Show More</button>
+  </section>
+  <script src="foto.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
+
