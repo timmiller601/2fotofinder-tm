@@ -68,7 +68,6 @@ function createCards(foto, direction) {
 
 function createCardsOnReload() {
   if (localStorage.length !== 0) {
-    // document.querySelector('.no-photo-text').remove();
     var storedArray = localStorage.getItem("array");
     var parsedArray = JSON.parse(storedArray);
     parsedArray.forEach(function(foto) {
@@ -78,7 +77,7 @@ function createCardsOnReload() {
     }) 
   } 
   favoriteCountUpdate();
-  // insertPrompt();
+  insertPrompt();
 }
 
 function createFotoString(event) {
@@ -108,7 +107,7 @@ function deleteCard(event) {
   fotoArray[index].deleteFromStorage(fotoArray, index);
   card.remove();
   favoriteCountUpdate();
-  // insertPrompt();
+  insertPrompt();
   if (fotoArray.length <=5) {
     disableButton(showMoreBtn);
     showMoreBtn.innerText = 'Show More';
@@ -182,12 +181,12 @@ function findIndexNumber(fotoId) {
   }
 }
 
-// function insertPrompt() {
-//   if (fotoArray.length === 0) {
-//     fotoCardSection.insertAdjacentHTML('beforebegin',
-//       '<h3 class="no-photo-text">Add photo above to start your album!</h3>');
-//   }
-// }
+function insertPrompt() {
+  if (fotoArray.length === 0) {
+    fotoCardSection.insertAdjacentHTML('beforebegin',
+      '<h3 class="no-photo-text">Add photo above to start your album!</h3>');
+  }
+}
 
 function liveSearch() {
   var searchInput = this.value.toLowerCase();
